@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "f7c1a06b-ff28-46fb-833d-7eb65702d2c1",
+		"name": "Car Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/rest/car/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"rest",
+						"car",
+						"all"
+					]
+				},
+				"description": "http://localhost:3002/rest/car/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Post New Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carPlateNumber\":102,\n    \"carModelName\":\"CarModel-102\",\n    \"carAvailableStartDate\":\"2020-07-31T15:02:22\",\n    \"carAvailableEndDate\":\"2020-08-09T15:02:22\",\n    \"carRentalPricePerHour\":18.9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/rest/car/addNewCar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"rest",
+						"car",
+						"addNewCar"
+					]
+				},
+				"description": "http://localhost:3002/rest/car/addNewCar\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Cars by Dates and Rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/rest/car/search?availableEndDate=2020-11-25T15:02:22&availableStartDate=2020-08-10T15:02:22&maximumRentalPrice=15.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"rest",
+						"car",
+						"search"
+					],
+					"query": [
+						{
+							"key": "availableEndDate",
+							"value": "2020-11-25T15:02:22"
+						},
+						{
+							"key": "availableStartDate",
+							"value": "2020-08-10T15:02:22"
+						},
+						{
+							"key": "maximumRentalPrice",
+							"value": "15.0"
+						}
+					]
+				},
+				"description": "http://localhost:3002/rest/car/search?availableEndDate=2020-11-25T15:02:22&availableStartDate=2020-08-10T15:02:22&maximumRentalPrice=15.0"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "186b62c4-e009-4d44-943b-d582ced65722",
+		"name": "Booking Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST New Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carPlateNumber\":101,\n    \"userId\":101,\n    \"bookingStartDate\":\"2020-08-06T16:02:22\",\n    \"bookingEndDate\":\"2020-08-09T15:02:22\",\n    \"bookingTime\":\"2020-08-01T11:02:22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/rest/booking/new/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"rest",
+						"booking",
+						"new",
+						"booking"
+					]
+				},
+				"description": "http://localhost:3003/rest/booking/new/booking"
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/rest/booking/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"rest",
+						"booking",
+						"all"
+					]
+				},
+				"description": "http://localhost:3003/rest/booking/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Report Total Bookings per hour within Dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/rest/booking/booked/perHour?bookingStartDate=2020-07-31T15:02:22&bookingEndDate=2020-08-10T15:02:22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"rest",
+						"booking",
+						"booked",
+						"perHour"
+					],
+					"query": [
+						{
+							"key": "bookingStartDate",
+							"value": "2020-07-31T15:02:22"
+						},
+						{
+							"key": "bookingEndDate",
+							"value": "2020-08-10T15:02:22"
+						}
+					]
+				},
+				"description": "http://localhost:3003/rest/booking/booked/perHour?bookingStartDate=2020-07-31T15:02:22&bookingEndDate=2020-08-10T15:02:22"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Bookings by Dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/rest/booking/search?bookingStartDate=2020-07-31T15:02:22&bookingEndDate=2020-08-27T15:02:22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"rest",
+						"booking",
+						"search"
+					],
+					"query": [
+						{
+							"key": "bookingStartDate",
+							"value": "2020-07-31T15:02:22"
+						},
+						{
+							"key": "bookingEndDate",
+							"value": "2020-08-27T15:02:22"
+						}
+					]
+				},
+				"description": "http://localhost:3003/rest/booking/search?bookingStartDate=2020-07-31T15:02:22&bookingEndDate=2020-08-27T15:02:22"
+			},
+			"response": []
+		},
+		{
+			"name": "Report Total Payment of Bookings within Dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/rest/booking/total/payment?bookingStartDate=2020-07-31T15:02:22&bookingEndDate=2020-08-31T15:02:22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"rest",
+						"booking",
+						"total",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "bookingStartDate",
+							"value": "2020-07-31T15:02:22"
+						},
+						{
+							"key": "bookingEndDate",
+							"value": "2020-08-31T15:02:22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking Report File",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/rest/booking/all/reports/html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"rest",
+						"booking",
+						"all",
+						"reports",
+						"html"
+					]
+				},
+				"description": "http://localhost:3003/rest/booking/all/reports/html"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
