@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "233e4310-5338-484e-b917-c43594a63ae5",
+		"name": "User Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userid\":103,\n    \"username\":\"TestUser3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/rest/user/new/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"rest",
+						"user",
+						"new",
+						"user"
+					]
+				},
+				"description": "http://localhost:3001/rest/user/new/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/rest/user/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"rest",
+						"user",
+						"all"
+					]
+				},
+				"description": "http://localhost:3001/rest/user/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Userid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/rest/user/userid/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"rest",
+						"user",
+						"userid",
+						"101"
+					]
+				},
+				"description": "http://localhost:3001/rest/user/userid/101"
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/rest/user/username/TestUser5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"rest",
+						"user",
+						"username",
+						"TestUser5"
+					]
+				},
+				"description": "http://localhost:3001/rest/user/username/{{UserName}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Export HTML Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/rest/user/all/reports/html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"rest",
+						"user",
+						"all",
+						"reports",
+						"html"
+					]
+				},
+				"description": "http://localhost:3001/rest/user/all/reports/html"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
